@@ -1,0 +1,7 @@
+<!--pages/combine/combine.wxml-->
+<view class='christmas-hat'>
+  <view class='canvas-content'>
+    <canvas style="width: 600rpx;height: 600rpx;" canvas-id="mycanvas" bindtap='previewImage' class="cl"></canvas>
+  </view>
+  <button class='save-btn' bindtap='confirmOauth'>保存图片</button>
+</view>

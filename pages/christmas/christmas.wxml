@@ -1,0 +1,60 @@
+<!--pages/christmas/christmas.wxml-->
+<view class='christmas-hat'>
+  <view class='main-content'>
+    <view class='image-content'>
+      <view class='has-image' wx:if="{{bgImageUrl}}">
+        <image src="{{bgImageUrl}}"></image>
+      </view>
+      <view class='no-image' wx:else>
+        <button hover-class='none' class='wechat-avatar' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>
+          <view class="plus">+</view>
+          <view>选择微信头像</view>
+        </button>
+      </view>
+      <view
+        wx:if="{{hatImageUrl}}"
+        class='change-view'
+        catchtouchstart='touchstart'
+        catchtouchmove='touchmove'
+        catchtouchend='touchend'>
+        <image class="hat" id="hat" 
+        style='width: {{width}}px;height: {{height}}px; left: {{left}}px; top: {{top}}px; border: {{showBorder?borderWidth:0}}px solid #fff;transform: scale({{scale}}) rotate({{rotate}}deg);' src="{{hatImageUrl}}"></image>
+        <image 
+          wx:if="{{showBorder}}"
+          style='width: {{handleRadius}}px; height: {{handleRadius}}px;top:{{closePoint.y-handleRadius/2}}px;left: {{closePoint.x-handleRadius/2}}px;'
+          id="close" 
+          class="close" 
+          src="../../images/clear.png"></image>
+        <image 
+          wx:if="{{showBorder}}"
+          style='width: {{handleRadius}}px; height: {{handleRadius}}px;left:{{handlePoint.x-handleRadius/2}}px;top: {{handlePoint.y-handleRadius/2}}px;'
+          class="rotate" 
+          id="rotate"
+          src="../../images/loop.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class='btn-content'>
+    <block wx:if="{{step == 1}}">
+      <view class='flex'>
+        <button class="operate-btn" bindtap='chooseImage'>选择照片</button>
+        <button class="operate-btn" bindtap='next'>下一步</button>
+      </view>
+    </block>
+    <block wx:if="{{step == 2}}">
+      <scroll-view class="scroll-view" scroll-x="true">
+        <image class="hat-img" 
+          wx:for="{{9}}" wx:key="{{index+1}}" 
+          src="../../images/hat/{{index+1}}.png"
+          data-hat-id="{{index+1}}"
+          bind:tap="chooseHat"></image>
+      </scroll-view> 
+      <view>
+        <view class='flex'>
+          <button class="operate-btn" bindtap='before'>上一步</button>
+          <button class="operate-btn" bindtap='createImg'>生成图片</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

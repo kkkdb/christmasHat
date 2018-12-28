@@ -1,0 +1,91 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wxcc5c9edc1b4d1748",
+	"projectname": "%E5%9C%A3%E8%AF%9E%E6%8D%A2%E5%B8%BD",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": 0,
+					"name": "商品详情",
+					"pathName": "pages/goodsDetail/goodsDetail",
+					"query": "talent_id=15"
+				},
+				{
+					"id": -1,
+					"name": "精选列表",
+					"pathName": "pages/goodsList/goodsList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "值得买",
+					"pathName": "pages/worthBuy/worthBuy",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "想买清单",
+					"pathName": "pages/buyList/buyList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "双十一",
+					"pathName": "pages/activityList/activityList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "海报",
+					"pathName": "pages/post/post",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "达人推荐",
+					"pathName": "pages/star/star",
+					"query": "talent_id=15"
+				},
+				{
+					"id": -1,
+					"name": "生成图片",
+					"pathName": "pages/combine/combine"
+				}
+			]
+		}
+	}
+}

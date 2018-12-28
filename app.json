@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/christmas/christmas",
+    "pages/combine/combine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "圣诞戴帽",
+    "navigationBarTextStyle": "black"
+  }
+}

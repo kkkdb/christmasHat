@@ -1,0 +1,6 @@
+/* pages/combine/combine.wxss */
+.canvas-content{
+  height: 600rpx;
+  width: 100%;
+  margin-bottom: 30rpx;
+}
